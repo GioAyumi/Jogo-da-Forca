@@ -1,0 +1,75 @@
+print("Vamos jogar forca!")
+letra=input("Digite qualquer letra pra começar: ")
+letra=letra.lower()
+palavra=["o","v","e","l","h","a"]
+descobrir=["*","*","*","*","*","*"]
+tentativas=11
+contador=0
+
+
+while(contador<=tentativas):
+  while(descobrir!=palavra):
+    letra=input("Digite uma letra: ")
+
+    if(letra== palavra[0]):
+      print("Parabéns, você achou a letra O")
+      descobrir[0]="o"
+      print(descobrir)
+    elif(letra== palavra[1]):
+      print("Parabéns, você achou a letra V")
+      descobrir[1]="v"
+      print(descobrir)
+    elif(letra==palavra[2]):
+      print("Parabéns, você achou a letra E")
+      descobrir[2]="e"
+      print(descobrir)
+    elif(letra==palavra[3]):
+      print("Parabéns, você achou a letra L")
+      descobrir[3]="l"
+      print(descobrir)
+    elif(letra== palavra[4]):
+      print("Parabéns, você achou a letra H")
+      descobrir[4]="h"
+      print(descobrir)
+    elif(letra==palavra[5]):
+      print("Parabéns, você achou a letra A")
+      descobrir[5]="a"
+      print(descobrir)
+    else:
+      tentativas=tentativas-1
+      print("você ainda tem ",tentativas,"tentativas")
+    if(tentativas==10):
+      print("|    0")
+      print("|     ")
+      print("|")
+      print("|______")
+    elif(tentativas==9):
+      print("|    0")
+      print("|   /  ")
+      print("|")
+      print("|______")
+    elif(tentativas==8):
+      print("|    0")
+      print("|   /| ")
+      print("|")
+      print("|______")
+    elif(tentativas==7):
+      print("|    0")
+      print("|   /|\ ")
+      print("|")
+      print("|______")
+    elif(tentativas==6):
+      print("|    0")
+      print("|   /|\ ")
+      print("|   /")
+      print("|______")
+    elif(tentativas==5):
+      print("|    0")
+      print("|   /|\ ")
+      print("|   / \ ")
+      print("|______")
+      print("você foi enforcado", tentativas)
+  break
+  contador=contador+1
+if (descobrir == palavra):
+  print("Parabéns você descobriu todas as letras")
